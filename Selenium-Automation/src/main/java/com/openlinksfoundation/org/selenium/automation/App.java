@@ -78,12 +78,28 @@ public class App extends Application {
     options.setExperimentalOption("mobileEmulation", mobileEmulation);
 
     // Initialize WebDriver with Mobile Mode
+    
+    //if button is clicked, then mobile mode, else no options
     WebDriver driver = new ChromeDriver(options);
     
     // Open the website in Mobile Mode
     driver.get("https://www.fromkg.com");
 
     System.out.println("✅ Website opened in Mobile Mode");
+    
+    WebElement signInBtn = driver.findElement(By.xpath("/html/body/div[2]/div[3]/div/div/div/div/div[1]/ul/li[2]/span"));
+    signInBtn.click();
+    signInBtn = driver.findElement(By.xpath("/html/body/div[2]/div[3]/div/div/div/div/div[2]/div/div[1]/div/div/button[1]"));
+    signInBtn.click();
+    WebElement userId = driver.findElement(By.xpath("//*[@id=\"nav-tabContent\"]/div/div[1]/input"));
+    userId.sendKeys("8530897612");
+    WebElement passwordId = driver.findElement(By.xpath("//*[@id=\"nav-tabContent\"]/div/div[2]/input"));
+    passwordId.sendKeys("uat");
+    signInBtn = driver.findElement(By.xpath("//*[@id=\"nav-tabContent\"]/div/button"));
+    signInBtn.click();
+    
+    //Search for the Red Error
+    //Log the error into a log.txt file
 }
     
     
