@@ -11,8 +11,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 /**
  * JavaFX App
@@ -56,8 +59,35 @@ public class App extends Application {
     }
     @FXML  // Connects the button from FXML
     private void run_Login(ActionEvent event) {
-        System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\chromedriver-win64\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.fromkg.com");
-    }
+    System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\chromedriver-win64\\chromedriver.exe");
+
+    // Create Chrome Options
+    ChromeOptions options = new ChromeOptions();
+
+    // Enable Mobile Emulation Mode (iPhone X)
+    Map<String, Object> deviceMetrics = new HashMap<>();
+    deviceMetrics.put("width", 375);
+    deviceMetrics.put("height", 812);
+    deviceMetrics.put("pixelRatio", 3.0);
+    deviceMetrics.put("touch", true);
+
+    Map<String, Object> mobileEmulation = new HashMap<>();
+    mobileEmulation.put("deviceMetrics", deviceMetrics);
+    mobileEmulation.put("userAgent", "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Mobile Safari/537.36");
+
+    options.setExperimentalOption("mobileEmulation", mobileEmulation);
+
+    // Initialize WebDriver with Mobile Mode
+    WebDriver driver = new ChromeDriver(options);
+    
+    // Open the website in Mobile Mode
+    driver.get("https://www.fromkg.com");
+
+    System.out.println("✅ Website opened in Mobile Mode");
 }
+    
+    
+}
+
+
+
