@@ -13,6 +13,7 @@ import org.openqa.selenium.WebElement;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import static javafx.application.Application.launch;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -59,7 +60,8 @@ public class App extends Application {
     }
     @FXML  // Connects the button from FXML
     private void run_Login(ActionEvent event) {
-    System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\chromedriver-win64\\chromedriver.exe");
+   System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\ChromeDriver\\chromedriver.exe");
+
 
     // Create Chrome Options
     ChromeOptions options = new ChromeOptions();
@@ -104,6 +106,3 @@ public class App extends Application {
     
     
 }
-
-
-
