@@ -1,0 +1,39 @@
+17:06:51 - ❌ Error detected on GR
+17:06:52 - ❌ Error on POM: element not interactable
+  (Session info: chrome=134.0.6998.90)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [dbf118599c918cdf2c5ddc6ebe112147, clickElement {id=f.22049B0DEE027A58BD2C3EC717E9EC3C.d.CFAE03DF19EA58FE9601CC1FF5C27E80.e.103}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.90, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56550}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56550/devtoo..., se:cdpVersion: 134.0.6998.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (dbf118599c918cdf2c5ddc6ebe112147)] -> xpath: //*[@id='rbnPOM']]
+Session ID: dbf118599c918cdf2c5ddc6ebe112147
+17:06:52 - ❌ Error on Forms: element not interactable
+  (Session info: chrome=134.0.6998.90)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [dbf118599c918cdf2c5ddc6ebe112147, clickElement {id=f.22049B0DEE027A58BD2C3EC717E9EC3C.d.CFAE03DF19EA58FE9601CC1FF5C27E80.e.104}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.90, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56550}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56550/devtoo..., se:cdpVersion: 134.0.6998.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (dbf118599c918cdf2c5ddc6ebe112147)] -> xpath: //*[@id='rbnNeedResponse']]
+Session ID: dbf118599c918cdf2c5ddc6ebe112147
+17:07:54 - ❌ Error detected on GR
+17:07:55 - ❌ Error on POM: element not interactable
+  (Session info: chrome=134.0.6998.90)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bf0188e610cc1e9f2e27b796f128c853, clickElement {id=f.F2AB9A5EB96F546883A2258B8BE56A6E.d.AFD32B7F6E17F8BD7F60455C8BE3363C.e.93}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.90, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56648}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56648/devtoo..., se:cdpVersion: 134.0.6998.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (bf0188e610cc1e9f2e27b796f128c853)] -> xpath: //*[@id='rbnPOM']]
+Session ID: bf0188e610cc1e9f2e27b796f128c853
+17:07:55 - ❌ Error on Forms: element not interactable
+  (Session info: chrome=134.0.6998.90)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bf0188e610cc1e9f2e27b796f128c853, clickElement {id=f.F2AB9A5EB96F546883A2258B8BE56A6E.d.AFD32B7F6E17F8BD7F60455C8BE3363C.e.94}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.90, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56648}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56648/devtoo..., se:cdpVersion: 134.0.6998.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (bf0188e610cc1e9f2e27b796f128c853)] -> xpath: //*[@id='rbnNeedResponse']]
+Session ID: bf0188e610cc1e9f2e27b796f128c853
+17:10:06 - ❌ Login failed or took too long.

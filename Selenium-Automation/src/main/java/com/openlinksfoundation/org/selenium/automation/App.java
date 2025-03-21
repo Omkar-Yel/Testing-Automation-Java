@@ -8,7 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriver; 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -103,7 +103,7 @@ public class App extends Application {
     WebElement userId = driver.findElement(By.xpath("//*[@id=\"nav-tabContent\"]/div/div[1]/input"));
     userId.sendKeys("8530897612");
     WebElement passwordId = driver.findElement(By.xpath("//*[@id=\"nav-tabContent\"]/div/div[2]/input"));
-    passwordId.sendKeys("uat");
+    passwordId.sendKeys("1234");
     signInBtn = driver.findElement(By.xpath("//*[@id=\"nav-tabContent\"]/div/button"));
     signInBtn.click();
    
@@ -130,7 +130,7 @@ public class App extends Application {
             // Keep browser open for 30 seconds after test
             Thread.sleep(30000);
 
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             takeScreenshot(driver, "Unexpected_Error");
             logError("❌ Unexpected Error: " + e.getMessage());
         } finally {
@@ -216,30 +216,43 @@ public class App extends Application {
     // Function to Take Screenshot
     private static void takeScreenshot(WebDriver driver, String filename) {
         try {
-            File testDataDir = new File("TestData");
-            if (!testDataDir.exists()) testDataDir.mkdir();
+            // Create a folder with the current date
+            String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+            File testDataDir = new File("TestData/" + date);
+            if (!testDataDir.exists()) testDataDir.mkdirs();
 
-            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+            // Format filename with timestamp
+            String timestamp = new SimpleDateFormat("HHmmss").format(new Date());
             File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileHandler.copy(srcFile, new File(testDataDir + "/" + filename + "_" + timestamp + ".png"));
-            System.out.println("📸 Screenshot saved: " + filename + "_" + timestamp + ".png");
+            File destFile = new File(testDataDir, filename + "_" + timestamp + ".png");
+
+            FileHandler.copy(srcFile, destFile);
+            System.out.println("📸 Screenshot saved: " + destFile.getAbsolutePath());
         } catch (IOException e) {
             System.out.println("❌ Screenshot failed: " + e.getMessage());
         }
     }
 
+
     // Function to Log Errors
     private static void logError(String message) {
         try {
+            // Create folder for logs
             File testDataDir = new File("TestData");
             if (!testDataDir.exists()) testDataDir.mkdir();
 
-            try (FileWriter writer = new FileWriter("TestData/log.txt", true)) {
-                writer.write(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) + " - " + message + "\n");
-            }
+            // Create or open log file
+            FileWriter writer = new FileWriter("TestData/error_log.txt", true);
+
+            // Append error with timestamp (HH:mm:ss)
+            String timestamp = new SimpleDateFormat("HH:mm:ss").format(new Date());
+            writer.write(timestamp + " - " + message + "\n");
+            writer.close();
+
             System.out.println("📝 Logged error: " + message);
         } catch (IOException e) {
             System.out.println("❌ Logging failed: " + e.getMessage());
         }
     }
+
 }
