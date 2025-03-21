@@ -130,7 +130,7 @@ public class App extends Application {
             // Keep browser open for 30 seconds after test
             Thread.sleep(30000);
 
-        } catch (Exception e) {
+        } catch (InterruptedException e) {
             takeScreenshot(driver, "Unexpected_Error");
             logError("❌ Unexpected Error: " + e.getMessage());
         } finally {
@@ -234,9 +234,9 @@ public class App extends Application {
             File testDataDir = new File("TestData");
             if (!testDataDir.exists()) testDataDir.mkdir();
 
-            FileWriter writer = new FileWriter("TestData/log.txt", true);
-            writer.write(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) + " - " + message + "\n");
-            writer.close();
+            try (FileWriter writer = new FileWriter("TestData/log.txt", true)) {
+                writer.write(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) + " - " + message + "\n");
+            }
             System.out.println("📝 Logged error: " + message);
         } catch (IOException e) {
             System.out.println("❌ Logging failed: " + e.getMessage());
