@@ -1,0 +1,49 @@
+12:46:59 - Error on GR: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='rbnGR']"}
+  (Session info: chrome=134.0.6998.167)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9fe11ff7f35d08d5d94136aa77fbf151, findElement {value=//*[@id='rbnGR'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.167, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61858}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61858/devtoo..., se:cdpVersion: 134.0.6998.167, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9fe11ff7f35d08d5d94136aa77fbf151
+12:47:02 - Error on POM: Not supported yet.
+12:47:02 - Error on Forms: element not interactable
+  (Session info: chrome=134.0.6998.167)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9fe11ff7f35d08d5d94136aa77fbf151, clickElement {id=f.8EB5B2CB7F040EC4F87A28EC6C0CE04D.d.32F2D1DF21CD7C7125C0E659976E091C.e.89}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.167, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61858}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61858/devtoo..., se:cdpVersion: 134.0.6998.167, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9fe11ff7f35d08d5d94136aa77fbf151)] -> xpath: //*[@id='rbnNeedResponse']]
+Session ID: 9fe11ff7f35d08d5d94136aa77fbf151
+12:48:24 - ❌ Invalid Username or Password detected.
+12:55:09 - Error on GR: Not supported yet.
+12:55:11 - Error on POM: element click intercepted: Element <input ng-show="op.Code!='LB'" type="radio" id="rbnPOM" ng-model="ObjFilter.IsAll" name="rbnType" value="POM" ng-change="ChangeFeedType(op.Code)" style="margin: 6px; pointer-events: none;" class="ng-pristine ng-untouched ng-valid needsclick ng-not-empty"> is not clickable at point (164, 153). Other element would receive the click: <div class="Wrapper-container ng-scope" ng-if="(loader === true  || forceLoader === true) &amp;&amp; !(FileProcessingObj.isprogressbar == true)" style="">...</div>
+  (Session info: chrome=134.0.6998.167)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2b0f6b825bccda94a7e4d8f69c72d4b0, clickElement {id=f.00251F3A29C77D1711A24E4118612B62.d.DFDD02C40624FB8D04DEBC77309E8430.e.110}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.167, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62458}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62458/devtoo..., se:cdpVersion: 134.0.6998.167, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2b0f6b825bccda94a7e4d8f69c72d4b0)] -> xpath: //*[@id='rbnPOM']]
+Session ID: 2b0f6b825bccda94a7e4d8f69c72d4b0
+12:55:12 - Error on Forms: element click intercepted: Element <input ng-show="op.Code!='LB'" type="radio" id="rbnNeedResponse" ng-model="ObjFilter.IsAll" name="rbnType" value="NeedResponse" ng-change="ChangeFeedType(op.Code)" style="margin: 6px; pointer-events: none;" class="ng-pristine ng-untouched ng-valid needsclick ng-not-empty"> is not clickable at point (262, 153). Other element would receive the click: <div>...</div>
+  (Session info: chrome=134.0.6998.167)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2b0f6b825bccda94a7e4d8f69c72d4b0, clickElement {id=f.00251F3A29C77D1711A24E4118612B62.d.DFDD02C40624FB8D04DEBC77309E8430.e.112}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.167, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62458}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62458/devtoo..., se:cdpVersion: 134.0.6998.167, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2b0f6b825bccda94a7e4d8f69c72d4b0)] -> xpath: //*[@id='rbnNeedResponse']]
+Session ID: 2b0f6b825bccda94a7e4d8f69c72d4b0
+15:10:33 - ❌ Unexpected Error: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div[3]/div/div/div/div/div[1]/ul/li[2]/span"}
+  (Session info: chrome=134.0.6998.167)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c7a2cd25e793c6580abfdd893ba0d398, findElement {using=xpath, value=/html/body/div[2]/div[3]/div/div/div/div/div[1]/ul/li[2]/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.167, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57554}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57554/devtoo..., se:cdpVersion: 134.0.6998.167, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c7a2cd25e793c6580abfdd893ba0d398
+15:10:45 - ❌ Invalid Username or Password detected.
