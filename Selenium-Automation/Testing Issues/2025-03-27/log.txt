@@ -18,6 +18,7 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 Element: [[ChromeDriver: chrome on windows (9fe11ff7f35d08d5d94136aa77fbf151)] -> xpath: //*[@id='rbnNeedResponse']]
 Session ID: 9fe11ff7f35d08d5d94136aa77fbf151
 12:48:24 - ❌ Invalid Username or Password detected.
+<<<<<<< Updated upstream
 12:55:09 - Error on GR: Not supported yet.
 12:55:11 - Error on POM: element click intercepted: Element <input ng-show="op.Code!='LB'" type="radio" id="rbnPOM" ng-model="ObjFilter.IsAll" name="rbnType" value="POM" ng-change="ChangeFeedType(op.Code)" style="margin: 6px; pointer-events: none;" class="ng-pristine ng-untouched ng-valid needsclick ng-not-empty"> is not clickable at point (164, 153). Other element would receive the click: <div class="Wrapper-container ng-scope" ng-if="(loader === true  || forceLoader === true) &amp;&amp; !(FileProcessingObj.isprogressbar == true)" style="">...</div>
   (Session info: chrome=134.0.6998.167)
@@ -47,3 +48,5 @@ Command: [c7a2cd25e793c6580abfdd893ba0d398, findElement {using=xpath, value=/htm
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.167, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57554}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57554/devtoo..., se:cdpVersion: 134.0.6998.167, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
 Session ID: c7a2cd25e793c6580abfdd893ba0d398
 15:10:45 - ❌ Invalid Username or Password detected.
+=======
+>>>>>>> Stashed changes
