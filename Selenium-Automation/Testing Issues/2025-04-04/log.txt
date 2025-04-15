@@ -1,0 +1,63 @@
+15:17:44 - ❌ Unexpected Error: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div[3]/div/div/div/div/div[1]/ul/li[2]/span"}
+  (Session info: chrome=134.0.6998.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0f86922ac5863b60fb90b670684feea2, findElement {value=/html/body/div[2]/div[3]/div/div/div/div/div[1]/ul/li[2]/span, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.178, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56294}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56294/devtoo..., se:cdpVersion: 134.0.6998.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0f86922ac5863b60fb90b670684feea2
+15:19:57 - ❌ Login failed or took too long.
+15:20:23 - Error clicking Menu: element click intercepted: Element <i class="fa fa-caret-right feed-type-arrow " feedmenu="" style="margin-left:6px" ng-click="objList.ShowAllFilter=true"></i> is not clickable at point (351, 154). Other element would receive the click: <div class="Wrapper-container ng-scope" ng-if="(loader === true  || forceLoader === true) &amp;&amp; !(FileProcessingObj.isprogressbar == true)" style="">...</div>
+  (Session info: chrome=134.0.6998.178)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8965d38667540680ac2bbf8efc8bade7, clickElement {id=f.68A827DA1AFF0A8C2C325964B1361925.d.982D8E7C306C03D1A695DACE2E0D7147.e.72}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.178, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58191}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58191/devtoo..., se:cdpVersion: 134.0.6998.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (8965d38667540680ac2bbf8efc8bade7)] -> xpath: //*[@id='divFeed']/div/div[3]/i[2]]
+Session ID: 8965d38667540680ac2bbf8efc8bade7
+15:20:24 - Error on GR: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='rbnGR']"}
+  (Session info: chrome=134.0.6998.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8965d38667540680ac2bbf8efc8bade7, findElement {using=xpath, value=//*[@id='rbnGR']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.178, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58191}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58191/devtoo..., se:cdpVersion: 134.0.6998.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8965d38667540680ac2bbf8efc8bade7
+15:20:26 - ❌ Unexpected Error: Not supported yet.
+15:20:37 - Error on GR: element not interactable
+  (Session info: chrome=134.0.6998.178)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2cdf1e6d93b6ba58dcdbffb612ee0c22, clickElement {id=f.9166279B1EF4D8F25A4E5AD7EC49A21A.d.0461D437C25532C07C0D161473426700.e.84}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.178, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58266}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58266/devtoo..., se:cdpVersion: 134.0.6998.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2cdf1e6d93b6ba58dcdbffb612ee0c22)] -> xpath: //*[@id='rbnGR']]
+Session ID: 2cdf1e6d93b6ba58dcdbffb612ee0c22
+15:20:40 - ❌ Unexpected Error: Not supported yet.
+15:36:38 - ❌ Invalid Username or Password detected.
+15:37:22 - Error on GR: Not supported yet.
+15:37:24 - ❌ Unexpected Error: Not supported yet.
+15:40:41 - Error clicking X: element not interactable
+  (Session info: chrome=134.0.6998.178)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6179a70933c584a6e640e6aa8e03ebbc, clickElement {id=f.EFC5ED5A12296A046A3A0D8371208E7F.d.62EDECD2B9737A565D0FD0204646AA70.e.91}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.178, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60742}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60742/devtoo..., se:cdpVersion: 134.0.6998.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6179a70933c584a6e640e6aa8e03ebbc)] -> xpath: //*[@id="divFeed"]/div/div[1]/div[1]/div/button[2]/span]
+Session ID: 6179a70933c584a6e640e6aa8e03ebbc
+15:40:43 - Error on GR: element click intercepted: Element <input type="radio" id="rbnGR" ng-model="ObjFilter.IsAll" name="rbnType" value="GR" ng-change="objList.ShowAllFilter=false;ChangeFeedType()" style="margin: 6px; pointer-events: none;" class="ng-pristine ng-untouched ng-valid needsclick ng-not-empty"> is not clickable at point (32, 201). Other element would receive the click: <div>...</div>
+  (Session info: chrome=134.0.6998.178)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6179a70933c584a6e640e6aa8e03ebbc, clickElement {id=f.EFC5ED5A12296A046A3A0D8371208E7F.d.62EDECD2B9737A565D0FD0204646AA70.e.76}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.178, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60742}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60742/devtoo..., se:cdpVersion: 134.0.6998.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6179a70933c584a6e640e6aa8e03ebbc)] -> xpath: //*[@id='rbnGR']]
+Session ID: 6179a70933c584a6e640e6aa8e03ebbc
+15:40:45 - ❌ Unexpected Error: Not supported yet.
+15:41:37 - Error on GR: Not supported yet.
+15:41:41 - ❌ Unexpected Error: Not supported yet.

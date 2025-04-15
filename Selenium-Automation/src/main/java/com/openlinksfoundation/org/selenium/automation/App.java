@@ -8,7 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver; 
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -32,6 +32,10 @@ public class App extends Application {
 
     private static Scene scene;
 
+    private static boolean isErrorPresent(WebDriver driver) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     @Override
     public void start(Stage primaryStage) throws IOException {
     System.out.println("🚀 JavaFX Application is Starting...");
@@ -40,18 +44,17 @@ public class App extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MainScreen.fxml"));
         Parent root = loader.load();
 
-        System.out.println("✅ FXML Loaded Successfully");
+        System.out.println("FXML Loaded Successfully");
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("TickLinks UI Test");
         primaryStage.show();
     } catch (IOException e) {
-        System.err.println("❌ Error Loading FXML: " + e.getMessage());
+        System.err.println("Error Loading FXML: " + e.getMessage());
         e.printStackTrace();
     }
 }
-
 
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
@@ -103,10 +106,16 @@ public class App extends Application {
     WebElement userId = driver.findElement(By.xpath("//*[@id=\"nav-tabContent\"]/div/div[1]/input"));
     userId.sendKeys("8530897612");
     WebElement passwordId = driver.findElement(By.xpath("//*[@id=\"nav-tabContent\"]/div/div[2]/input"));
-    passwordId.sendKeys("1234");
+    passwordId.sendKeys("uat");
     signInBtn = driver.findElement(By.xpath("//*[@id=\"nav-tabContent\"]/div/button"));
     signInBtn.click();
    
+            Thread.sleep(2000); // Wait for possible error message
+            if (isErrorDisplayed(driver)) {
+                takeScreenshot(driver, "Invalid_Credentials_Error");
+                logError("❌ Invalid Username or Password detected.");
+                return;
+            }
 
             // Wait for login confirmation
             if (waitForPageLoad(driver, 60) && waitForElement(driver, "//*[@id='divFeed']", 30)) {
@@ -118,18 +127,33 @@ public class App extends Application {
             }
 
             // Open menu before navigating to pages
-            clickElement(driver, "Menu", "//*[@id='divFeed']/div/div[3]/i[2]");
-
-            // Navigate and scroll on pages
-            navigateAndScroll(driver, "GR", "//*[@id='rbnGR']");
-            navigateAndScroll(driver, "POM", "//*[@id='rbnPOM']");
-            navigateAndScroll(driver, "Forms", "//*[@id='rbnNeedResponse']");
-
+               
+             navigateAndScroll(driver, "GR", "//*[@id='rbnGR']");
+             clickElement(driver, "X", "//*[@id=\"divFeed\"]/div/div[1]/div[1]/div/button[2]/span");
+             
+            
+            Thread.sleep(2000);
+            if (isErrorPresent(driver)) {
+                takeScreenshot(driver, "GR_Page_Error");
+                logError("❌ Red error detected on GR page.");
+            }
+            
+            WebElement grItem = driver.findElement(By.xpath("//*[@id='divFeed']/div/div[7]/div[2]/div[1]/a/small"));
+            grItem.click();
+            System.out.println("✅ Clicked on GR item");
+            
+            Thread.sleep(2000);
+            WebElement backButton = driver.findElement(By.xpath("/html/body/div[4]/div[3]/div/div/div[1]/div/div[34]/div[1]/div[1]/div/div[1]/div/i"));
+            backButton.click();
+            System.out.println("✅ Clicked on Back Button");
+            
+            Thread.sleep(2000);
+            WebElement closeButton = driver.findElement(By.xpath("//*[@id='rbnGR']"));
+            closeButton.click();
+            System.out.println("✅ Clicked on Cross Button to exit GR page");
+            
             System.out.println("✅ Test completed successfully");
-
-            // Keep browser open for 30 seconds after test
             Thread.sleep(30000);
-
         } catch (Exception e) {
             takeScreenshot(driver, "Unexpected_Error");
             logError("❌ Unexpected Error: " + e.getMessage());
@@ -138,43 +162,44 @@ public class App extends Application {
         }
     }
 
+
     // Function to Click on an Element
     private static void clickElement(WebDriver driver, String elementName, String xpath) {
         try {
             if (waitForElement(driver, xpath, 30)) {
                 driver.findElement(By.xpath(xpath)).click();
-                System.out.println("🔹 Clicked on " + elementName);
+                System.out.println("Clicked on " + elementName);
             } else {
                 takeScreenshot(driver, elementName + "_Click_Failed");
-                logError("❌ Could not find " + elementName + " to click.");
+                logError("Could not find " + elementName + " to click.");
             }
         } catch (Exception e) {
             takeScreenshot(driver, elementName + "_Click_Error");
-            logError("❌ Error clicking " + elementName + ": " + e.getMessage());
+            logError("Error clicking " + elementName + ": " + e.getMessage());
         }
     }
 
     // Function to Navigate to a Page, Scroll Down, and Check for Errors
     private static void navigateAndScroll(WebDriver driver, String pageName, String xpath) {
         try {
-            System.out.println("🔄 Navigating to " + pageName + "...");
+            System.out.println("Navigating to " + pageName + "...");
             driver.findElement(By.xpath(xpath)).click();
 
             if (waitForPageLoad(driver, 60) && waitForElement(driver, xpath, 30)) {
                 scrollDown(driver);
-                System.out.println("✅ " + pageName + " loaded and scrolled down.");
+                System.out.println( pageName + " loaded and scrolled down.");
                 
                 if (isErrorPresent(driver)) {
                     takeScreenshot(driver, pageName + "_Error");
-                    logError("❌ Error detected on " + pageName);
+                    logError("Error detected on " + pageName);
                 }
             } else {
                 takeScreenshot(driver, pageName + "_Load_Failed");
-                logError("❌ " + pageName + " did not load properly.");
+                logError( pageName + " did not load properly.");
             }
         } catch (Exception e) {
             takeScreenshot(driver, pageName + "_Error");
-            logError("❌ Error on " + pageName + ": " + e.getMessage());
+            logError("Error on " + pageName + ": " + e.getMessage());
         }
     }
 
@@ -209,50 +234,61 @@ public class App extends Application {
     }
 
     // Function to Check for Errors
-    private static boolean isErrorPresent(WebDriver driver) {
-        return driver.getPageSource().contains("error") || driver.getPageSource().contains("Invalid credentials");
+    private static boolean isErrorDisplayed(WebDriver driver) {
+        try {
+            return !driver.findElements(By.xpath("//div[@class='toast-message']")).isEmpty();
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     // Function to Take Screenshot
-    private static void takeScreenshot(WebDriver driver, String filename) {
-        try {
-            // Create a folder with the current date
-            String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-            File testDataDir = new File("TestData/" + date);
-            if (!testDataDir.exists()) testDataDir.mkdirs();
+   private static void takeScreenshot(WebDriver driver, String filename) {
+    try {
+        // Create main "Testing Issues" folder
+        File mainFolder = new File("Testing Issues");
+        if (!mainFolder.exists()) mainFolder.mkdir();
 
-            // Format filename with timestamp
-            String timestamp = new SimpleDateFormat("HHmmss").format(new Date());
-            File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            File destFile = new File(testDataDir, filename + "_" + timestamp + ".png");
+        // Create subfolder for the current date (YYYY-MM-DD)
+        String currentDate = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+        File dailyFolder = new File(mainFolder, currentDate);
+        if (!dailyFolder.exists()) dailyFolder.mkdir();
 
-            FileHandler.copy(srcFile, destFile);
-            System.out.println("📸 Screenshot saved: " + destFile.getAbsolutePath());
-        } catch (IOException e) {
-            System.out.println("❌ Screenshot failed: " + e.getMessage());
-        }
+        // Generate timestamp for unique filenames
+        String timestamp = new SimpleDateFormat("HHmmss").format(new Date());
+        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File screenshotFile = new File(dailyFolder, filename + "_" + timestamp + ".png");
+
+        // Save the screenshot
+        FileHandler.copy(srcFile, screenshotFile);
+        System.out.println("📸 Screenshot saved: " + screenshotFile.getAbsolutePath());
+    } catch (IOException e) {
+        System.out.println("❌ Screenshot failed: " + e.getMessage());
     }
-
-
-    // Function to Log Errors
-    private static void logError(String message) {
-        try {
-            // Create folder for logs
-            File testDataDir = new File("TestData");
-            if (!testDataDir.exists()) testDataDir.mkdir();
-
-            // Create or open log file
-            FileWriter writer = new FileWriter("TestData/error_log.txt", true);
-
-            // Append error with timestamp (HH:mm:ss)
-            String timestamp = new SimpleDateFormat("HH:mm:ss").format(new Date());
-            writer.write(timestamp + " - " + message + "\n");
-            writer.close();
-
-            System.out.println("📝 Logged error: " + message);
-        } catch (IOException e) {
-            System.out.println("❌ Logging failed: " + e.getMessage());
-        }
-    }
-
 }
+
+// Function to Log Errors
+private static void logError(String message) {
+    try {
+        // Create main "Testing Issues" folder
+        File mainFolder = new File("Testing Issues");
+        if (!mainFolder.exists()) mainFolder.mkdir();
+
+        // Create subfolder for the current date (YYYY-MM-DD)
+        String currentDate = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+        File dailyFolder = new File(mainFolder, currentDate);
+        if (!dailyFolder.exists()) dailyFolder.mkdir();
+
+        // Log file path inside the daily folder
+        File logFile = new File(dailyFolder, "log.txt");
+
+        // Append error message with timestamp
+        FileWriter writer = new FileWriter(logFile, true);
+        writer.write(new SimpleDateFormat("HH:mm:ss").format(new Date()) + " - " + message + "\n");
+        writer.close();
+
+        System.out.println("Logged error: " + message);
+    } catch (IOException e) {
+        System.out.println("Logging failed: " + e.getMessage());
+    }
+}}
