@@ -103,7 +103,7 @@ public class App extends Application {
     WebElement userId = driver.findElement(By.xpath("//*[@id=\"nav-tabContent\"]/div/div[1]/input"));
     userId.sendKeys("8530897612");
     WebElement passwordId = driver.findElement(By.xpath("//*[@id=\"nav-tabContent\"]/div/div[2]/input"));
-    passwordId.sendKeys("1234");
+    passwordId.sendKeys("uat");
     signInBtn = driver.findElement(By.xpath("//*[@id=\"nav-tabContent\"]/div/button"));
     signInBtn.click();
    
@@ -121,9 +121,9 @@ public class App extends Application {
             clickElement(driver, "Menu", "//*[@id='divFeed']/div/div[3]/i[2]");
 
             // Navigate and scroll on pages
-            navigateAndScroll(driver, "GR", "//*[@id='rbnGR']");
-            navigateAndScroll(driver, "POM", "//*[@id='rbnPOM']");
-            navigateAndScroll(driver, "Forms", "//*[@id='rbnNeedResponse']");
+            navigateAndScroll(driver, "GR", "//*[@id='rbnGR']", "//*[@id='GR_Unique_Section']", "//*[@id=\"divFeed\"]/div/div[1]/div[1]/div/button[2]/span");  
+            navigateAndScroll(driver, "POM", "//*[@id='rbnPOM']", "//*[@id='POM_Unique_Section']", "//*[@id=\"divFeed\"]/div/div[1]/div[1]/div/button[2]/span");  
+            navigateAndScroll(driver, "Forms", "//*[@id='rbnNeedResponse']", "//*[@id='Forms_Unique_Section']", "//*[@id=\"divFeed\"]/div/div[1]/div[1]/div/button[2]");  
 
             System.out.println("✅ Test completed successfully");
 
@@ -155,28 +155,43 @@ public class App extends Application {
     }
 
     // Function to Navigate to a Page, Scroll Down, and Check for Errors
-    private static void navigateAndScroll(WebDriver driver, String pageName, String xpath) {
-        try {
-            System.out.println("🔄 Navigating to " + pageName + "...");
-            driver.findElement(By.xpath(xpath)).click();
+    private static void navigateAndScroll(WebDriver driver, String pageName, String buttonXpath, String sectionXpath, String closeButtonXpath) {
+    try {
+        System.out.println("🔄 Navigating to " + pageName + "...");
 
-            if (waitForPageLoad(driver, 60) && waitForElement(driver, xpath, 30)) {
-                scrollDown(driver);
-                System.out.println("✅ " + pageName + " loaded and scrolled down.");
-                
-                if (isErrorPresent(driver)) {
-                    takeScreenshot(driver, pageName + "_Error");
-                    logError("❌ Error detected on " + pageName);
-                }
+        // Click on the page button
+        WebElement pageButton = driver.findElement(By.xpath(buttonXpath));
+        pageButton.click();
+        System.out.println("🔹 Clicked on " + pageName);
+
+        // Wait for the section to load
+        if (waitForPageLoad(driver, 60) && waitForElement(driver, sectionXpath, 30)) {
+            scrollDown(driver);
+            System.out.println("✅ " + pageName + " loaded and scrolled down.");
+
+            // 🔴 Add the correct XPath for the close button in the function call below
+            if (waitForElement(driver, closeButtonXpath, 10)) {
+                WebElement closeButton = driver.findElement(By.xpath(closeButtonXpath));
+
+                closeButton.click();
+                System.out.println("❎ Closed " + pageName + " section.");
             } else {
-                takeScreenshot(driver, pageName + "_Load_Failed");
-                logError("❌ " + pageName + " did not load properly.");
+                takeScreenshot(driver, pageName + "_Close_Failed");
+                logError("❌ Could not find close button for " + pageName);
             }
-        } catch (Exception e) {
-            takeScreenshot(driver, pageName + "_Error");
-            logError("❌ Error on " + pageName + ": " + e.getMessage());
+        } else {
+            takeScreenshot(driver, pageName + "_Load_Failed");
+            logError("❌ " + pageName + " did not load properly.");
         }
+    } catch (Exception e) {
+        takeScreenshot(driver, pageName + "_Error");
+        logError("❌ Error on " + pageName + ": " + e.getMessage());
     }
+}
+
+
+    
+
 
     // Function to Wait for an Element
     private static boolean waitForElement(WebDriver driver, String xpath, int timeoutSec) {
@@ -253,6 +268,6 @@ public class App extends Application {
         } catch (IOException e) {
             System.out.println("❌ Logging failed: " + e.getMessage());
         }
-    }
+    } 
 
 }
