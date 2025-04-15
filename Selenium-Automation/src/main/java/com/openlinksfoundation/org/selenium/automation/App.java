@@ -30,6 +30,7 @@ import org.openqa.selenium.io.FileHandler;
  */
 public class App extends Application {
 
+    String logError_2 = "";
     private static Scene scene;
 
     private static boolean isErrorPresent(WebDriver driver) {
@@ -209,7 +210,9 @@ public class App extends Application {
             try {
                 Thread.sleep(1000);
                 if (!driver.findElements(By.xpath(xpath)).isEmpty()) return true;
-            } catch (InterruptedException ignored) {}
+            } catch (InterruptedException ignored) {
+                logError_2 = "Error Found while trying to access the element: ";
+            }
         }
         return false;
     }
