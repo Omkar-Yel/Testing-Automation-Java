@@ -143,6 +143,7 @@ Element: [[ChromeDriver: chrome on windows (c1be6f06a7e74ebaa9748da7d6b5e3e2)] -
 Session ID: c1be6f06a7e74ebaa9748da7d6b5e3e2
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 Command: [00d41886783fcf39801f30f3d0ff7c65, findElement {using=xpath, value=//*[@id='rbnNeedResponse']}]
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.167, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61631}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61631/devtoo..., se:cdpVersion: 134.0.6998.167, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
@@ -152,6 +153,9 @@ Session ID: 00d41886783fcf39801f30f3d0ff7c65
 Command: [00d41886783fcf39801f30f3d0ff7c65, findElement {using=xpath, value=//*[@id='rbnNeedResponse']}]
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.167, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61631}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61631/devtoo..., se:cdpVersion: 134.0.6998.167, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
 Session ID: 00d41886783fcf39801f30f3d0ff7c65
+>>>>>>> Stashed changes
+=======
+2025-03-21 17:19:21 - ❌ Unexpected Error: Not supported yet.
 >>>>>>> Stashed changes
 =======
 2025-03-21 17:19:21 - ❌ Unexpected Error: Not supported yet.
