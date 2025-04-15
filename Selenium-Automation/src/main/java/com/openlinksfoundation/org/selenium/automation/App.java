@@ -106,7 +106,7 @@ public class App extends Application {
     WebElement userId = driver.findElement(By.xpath("//*[@id=\"nav-tabContent\"]/div/div[1]/input"));
     userId.sendKeys("8530897612");
     WebElement passwordId = driver.findElement(By.xpath("//*[@id=\"nav-tabContent\"]/div/div[2]/input"));
-    passwordId.sendKeys("1234");
+    passwordId.sendKeys("uat");
     signInBtn = driver.findElement(By.xpath("//*[@id=\"nav-tabContent\"]/div/button"));
     signInBtn.click();
    
@@ -127,18 +127,33 @@ public class App extends Application {
             }
 
             // Open menu before navigating to pages
-            clickElement(driver, "Menu", "//*[@id='divFeed']/div/div[3]/i[2]");
-
-            // Navigate and scroll on pages
-            navigateAndScroll(driver, "GR", "//*[@id='rbnGR']");
-            navigateAndScroll(driver, "POM", "//*[@id='rbnPOM']");
-            navigateAndScroll(driver, "Forms", "//*[@id='rbnNeedResponse']");
-
+               
+             navigateAndScroll(driver, "GR", "//*[@id='rbnGR']");
+             clickElement(driver, "X", "//*[@id=\"divFeed\"]/div/div[1]/div[1]/div/button[2]/span");
+             
+            
+            Thread.sleep(2000);
+            if (isErrorPresent(driver)) {
+                takeScreenshot(driver, "GR_Page_Error");
+                logError("❌ Red error detected on GR page.");
+            }
+            
+            WebElement grItem = driver.findElement(By.xpath("//*[@id='divFeed']/div/div[7]/div[2]/div[1]/a/small"));
+            grItem.click();
+            System.out.println("✅ Clicked on GR item");
+            
+            Thread.sleep(2000);
+            WebElement backButton = driver.findElement(By.xpath("/html/body/div[4]/div[3]/div/div/div[1]/div/div[34]/div[1]/div[1]/div/div[1]/div/i"));
+            backButton.click();
+            System.out.println("✅ Clicked on Back Button");
+            
+            Thread.sleep(2000);
+            WebElement closeButton = driver.findElement(By.xpath("//*[@id='rbnGR']"));
+            closeButton.click();
+            System.out.println("✅ Clicked on Cross Button to exit GR page");
+            
             System.out.println("✅ Test completed successfully");
-
-            // Keep browser open for 30 seconds after test
             Thread.sleep(30000);
-
         } catch (Exception e) {
             takeScreenshot(driver, "Unexpected_Error");
             logError("❌ Unexpected Error: " + e.getMessage());
@@ -146,6 +161,7 @@ public class App extends Application {
             driver.quit();
         }
     }
+
 
     // Function to Click on an Element
     private static void clickElement(WebDriver driver, String elementName, String xpath) {
