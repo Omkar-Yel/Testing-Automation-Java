@@ -11,7 +11,15 @@
         <URL value="@styles/mainscreen.css" />
     </stylesheets>
    <children>
+      <!-- First Button for Testing Login -->
       <Button fx:id="Login_Btn" layoutX="14.0" layoutY="123.0" mnemonicParsing="false" onAction="#run_Login" prefHeight="31.0" prefWidth="134.0" text="Test Login Module" />
+      
+      <!-- Second Button for Testing GR Module, separated vertically -->
+      <Button fx:id="GR_Btn" layoutX="14.0" layoutY="173.0" mnemonicParsing="false" onAction="#run_GR" prefHeight="31.0" prefWidth="134.0" text="Test GR Module" />
+      
+      <Button fx:id="ClubActivity_Btn" layoutX="14.0" layoutY="223.0" mnemonicParsing="false" onAction="#run_ClubActivities" prefHeight="31.0" prefWidth="134.0" text="Test Club_Activities Module" />
+
+      <!-- Title Label -->
       <Label layoutX="14.0" layoutY="14.0" prefHeight="101.0" prefWidth="572.0" style="-fx-alignment: center; -fx-background-color: lightgrey;" text="Ticklinks UI Automation" textAlignment="CENTER" underline="true">
          <font>
             <Font name="Arial Black" size="22.0" />

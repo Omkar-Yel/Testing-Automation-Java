@@ -1,4 +1,4 @@
-package com.openlinksfoundation.org.selenium.automation;
+        package com.openlinksfoundation.org.selenium.automation;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
