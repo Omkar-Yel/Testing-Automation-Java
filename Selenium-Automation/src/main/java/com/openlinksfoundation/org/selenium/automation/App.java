@@ -201,6 +201,7 @@ public class App extends Application {
     }
     
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     
     @FXML
 private void run_TLM() {
@@ -393,6 +394,8 @@ public void selectFile(String path) throws AWTException {
     robot.delay(4000);
     robot.keyRelease(KeyEvent.VK_ENTER);
 }
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 
