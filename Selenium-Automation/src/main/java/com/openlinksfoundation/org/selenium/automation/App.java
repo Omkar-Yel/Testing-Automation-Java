@@ -200,6 +200,7 @@ public class App extends Application {
         }
     }
     
+<<<<<<< Updated upstream
     
     @FXML
 private void run_TLM() {
@@ -392,6 +393,8 @@ public void selectFile(String path) throws AWTException {
     robot.delay(4000);
     robot.keyRelease(KeyEvent.VK_ENTER);
 }
+=======
+>>>>>>> Stashed changes
 
     // Function to Scroll and Click
     private static void scrollAndClick(WebDriver driver, String xpath, String name) {
