@@ -11,7 +11,12 @@
         <URL value="@styles/mainscreen.css" />
     </stylesheets>
    <children>
-      <Button fx:id="Login_Btn" layoutX="14.0" layoutY="123.0" mnemonicParsing="false" onAction="#run_Login" prefHeight="31.0" prefWidth="134.0" text="Test Login Module" />
+      
+       <Button fx:id="Login_Btn" layoutX="14.0" layoutY="123.0" mnemonicParsing="false" onAction="#run_Login" prefHeight="31.0" prefWidth="134.0" text="Test Login Module" />
+       <Button fx:id="GR_Btn" layoutX="14.0" layoutY="173.0" mnemonicParsing="false" onAction="#run_GR" prefHeight="31.0" prefWidth="134.0" text="Test GR Module" />
+       <Button fx:id="ClubActivities_Btn" layoutX="14.0" layoutY="223.0" mnemonicParsing="false" onAction="#run_ClubActivities" prefHeight="31.0" prefWidth="134.0" text="Test Club Activities Module" />
+       <Button fx:id="TLM_Btn" layoutX="200.0" layoutY="123.0" mnemonicParsing="false" onAction="#run_TLM" prefHeight="31.0" prefWidth="134.0" text="Test TLM  Module" />
+       
       <Label layoutX="14.0" layoutY="14.0" prefHeight="101.0" prefWidth="572.0" style="-fx-alignment: center; -fx-background-color: lightgrey;" text="Ticklinks UI Automation" textAlignment="CENTER" underline="true">
          <font>
             <Font name="Arial Black" size="22.0" />

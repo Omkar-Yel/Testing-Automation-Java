@@ -1,0 +1,45 @@
+11:42:41 - ❌ Exception during Club Activities Test: invalid argument: File not found : "C:\Users\Admin\Documents\GitHub\Testing-Automation-Java\Selenium-Automation\Media\peter-vanosdall-uZVtAixV8c8-unsplash.jpg"
+  (Session info: chrome=135.0.7049.86)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7fbb92a61d21edbfd98a86fedd8f4421, sendKeysToElement {id=f.B5F3390C4B6929DCFA94BF330076830E.d.E39DC401CF36C23478F6C0234BBC210C.e.145, value=[Ljava.lang.CharSequence;@5397ef28}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.86, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50345}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50345/devtoo..., se:cdpVersion: 135.0.7049.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (7fbb92a61d21edbfd98a86fedd8f4421)] -> xpath: //input[@type='file']]
+Session ID: 7fbb92a61d21edbfd98a86fedd8f4421
+11:44:26 - ❌ Exception during Club Activities Test: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[4]/div[3]/div/div/div[1]/div/div[12]/div[2]/div[2]/div/ui-carousel/div/div[1]/div/div[2]/div/div[1]/a/img"}
+  (Session info: chrome=135.0.7049.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ac1ceeb633a950b62b4ba1ffcc6efb7f, findElement {using=xpath, value=/html/body/div[4]/div[3]/div/div/div[1]/div/div[12]/div[2]/div[2]/div/ui-carousel/div/div[1]/div/div[2]/div/div[1]/a/img}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.86, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50475}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50475/devtoo..., se:cdpVersion: 135.0.7049.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ac1ceeb633a950b62b4ba1ffcc6efb7f
+11:47:32 - ❌ Exception during Club Activities Test: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[4]/div[3]/div/div/div[1]/div/div[12]/div[2]/div[2]/div/ui-carousel/div/div[1]/div/div[2]/div/div[1]/a/img"}
+  (Session info: chrome=135.0.7049.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2493004d273926da61c1a7e83e2704fa, findElement {using=xpath, value=/html/body/div[4]/div[3]/div/div/div[1]/div/div[12]/div[2]/div[2]/div/ui-carousel/div/div[1]/div/div[2]/div/div[1]/a/img}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.86, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50635}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50635/devtoo..., se:cdpVersion: 135.0.7049.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2493004d273926da61c1a7e83e2704fa
+11:48:50 - ❌ Exception during Club Activities Test: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[4]/div[3]/div/div/div[1]/div/div[12]/div[2]/div[2]/div/ui-carousel/div/div[1]/div/div[2]/div/div[1]/a/img"}
+  (Session info: chrome=135.0.7049.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [88bf30be5af5327dc1b12d244dc4e91f, findElement {value=/html/body/div[4]/div[3]/div/div/div[1]/div/div[12]/div[2]/div[2]/div/ui-carousel/div/div[1]/div/div[2]/div/div[1]/a/img, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.86, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50731}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50731/devtoo..., se:cdpVersion: 135.0.7049.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 88bf30be5af5327dc1b12d244dc4e91f
+12:05:10 - ❌ Exception during Club Activities Test: element click intercepted: Element <select class="select_language border-0 box-shadow-none bg-white font-12 ng-pristine ng-untouched ng-valid needsclick ng-not-empty" ng-options="item.Id as item.Name for item in listobj.LanguageList" ng-model="objActivityAndProject.LanguageId" ng-change="ResetLanguage()" style="">...</select> is not clickable at point (20, 181). Other element would receive the click: <div class="Wrapper-container ng-scope" ng-if="(loader === true  || forceLoader === true) &amp;&amp; !(FileProcessingObj.isprogressbar == true)" style="">...</div>
+  (Session info: chrome=135.0.7049.86)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [045df80efdbe3aee90e31a772eb75457, clickElement {id=f.37024147BC6AE64C24EBB7AAC1230840.d.E511ABE6502B26977B4FF5AA10B9DA89.e.139}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.86, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51387}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51387/devtoo..., se:cdpVersion: 135.0.7049.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (045df80efdbe3aee90e31a772eb75457)] -> xpath: /html/body/div[4]/div[3]/div/div/div[1]/div/div[12]/div[1]/div/div[3]/div[2]/div[1]/div[2]/select[1]]
+Session ID: 045df80efdbe3aee90e31a772eb75457
